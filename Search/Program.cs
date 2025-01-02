@@ -21,21 +21,7 @@ namespace Search
             var directorySearcher = new DirectorySearcher(@"G:\Training\");
             var searchResults = directorySearcher.Search(argList);
 
-            if (!searchResults.Any())
-            {
-                Console.WriteLine("No results found.");
-                return 1;
-            }
-
-            foreach (var item in searchResults)
-            {
-                string currentDate = item.CreateDate.ToString();
-                if (currentDate.Length == 9)
-                {
-                    currentDate = $"0{currentDate}";
-                }
-                Console.WriteLine($"{currentDate} - {item.Folder}");
-            }
+            ResultsPrinter.Print(searchResults);
 
             return 0;
         }
