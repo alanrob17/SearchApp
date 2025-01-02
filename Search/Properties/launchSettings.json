@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Search": {
+      "commandName": "Project",
+      "commandLineArgs": "docker"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
